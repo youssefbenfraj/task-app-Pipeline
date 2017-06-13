@@ -1,4 +1,4 @@
-# Angular Frontend with SpringBoot (Java) Backend
+# Simple Task CRUD App - Angular Frontend with SpringBoot (Java) Backend
 Application to demonstrate various parts of a service oriented RESTfull application.
 <h3>Technology Stack</h3>
 <table>
