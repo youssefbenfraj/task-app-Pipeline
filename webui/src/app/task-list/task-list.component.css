@@ -179,7 +179,7 @@ label.completed {
 
 .delete:after {
   cursor: pointer;
-  content: url(assets/images/delete.png);
+  content: url(/assets/images/delete.png);
 }
 
 .view:hover .delete{
@@ -209,7 +209,7 @@ label.completed {
 
 .update:after {
   cursor: pointer;
-  content: url(assets/images/edit.png);
+  content: url(/assets/images/edit.png);
 }
 
 .view:hover .update{
