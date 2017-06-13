@@ -38,7 +38,7 @@ PROJECT_FOLDER
 │  └──[main]      
 │     └──[java]      
 │     └──[resources]
-│        │  application.properties         
+│        │          
 │        └──application.properties  #contains springboot configurations 
 │
 └──[webui]
