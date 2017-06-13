@@ -1,0 +1,49 @@
+<section class="taskapp">
+  <header class="header">
+    <h1>task app</h1>
+    <form [formGroup]="taskForm" (ngSubmit)="onTaskFormSubmit(frm)" #frm="ngForm">
+      <input class="new-task" placeholder="What is your task?" formControlName="name" autofocus>
+      <button class="add" *ngIf="!taskIdToUpdate"><md-icon>add</md-icon></button>
+      <button class="add" *ngIf="taskIdToUpdate"><md-icon>save</md-icon></button>
+      <button class="add" (click)="backToCreateTask()" *ngIf="taskIdToUpdate"><md-icon>refresh</md-icon></button>
+    </form>
+  </header>
+  <section class="main">
+    <ul class="task-list">
+      <li *ngFor="let task of allTasks">
+        <div class="view">
+          <md-checkbox [disabled]="task.completed" class="completed" (click)="taskCompleted(task)" [checked]="task.completed">
+            <label [class.completed]="task.completed">{{task.name}}</label>
+          </md-checkbox>
+          <button (click)="loadTaskToEdit(task.id)" [ngClass]="{'update': !task.completed}"></button>
+          <button (click)="deleteTask(task.id)" class="delete"></button>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section class="footer">
+    <div *ngIf="statusCode; else processing">
+      <div *ngIf="statusCode === 201" [ngClass]="'success'">
+        Task added successfully.
+      </div>
+      <div *ngIf="statusCode === 409" [ngClass]="'error'">
+        Task already exists.
+      </div>
+      <div *ngIf="statusCode === 200" [ngClass]="'success'">
+        Task updated successfully.
+      </div>
+      <div *ngIf="statusCode === 204" [ngClass]="'success'">
+        Task deleted successfully.
+      </div>
+      <div *ngIf="statusCode === 500" [ngClass]="'error'">
+        Internal Server Error.
+      </div>
+    </div>
+    <div *ngIf="taskForm.get('name').invalid && processValidation" [ngClass]="'error'">
+      Task cannot be empty.
+    </div>
+    <ng-template #processing>
+      <img *ngIf="requestProcessing" src="assets/images/loading.gif">
+    </ng-template>
+  </section>
+</section>
