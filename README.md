@@ -37,8 +37,7 @@ PROJECT_FOLDER
 └──[src]      
 │  └──[main]      
 │     └──[java]      
-│     └──[resources]
-│        │          
+│     └──[resources]    
 │        └──application.properties  #contains springboot configurations 
 │
 └──[webui]
@@ -65,7 +64,7 @@ This is an RESTfull implementation of a simple task app. The goal of the project
 </ul>
 <h3>Install Frontend</h3>
 <pre>
-# Navigate to PROJECT_FOLDER/webui (should cntain package.json )
+# Navigate to PROJECT_FOLDER/webui (should contain package.json )
 npm install
 </pre>
 <h3>Install Backend (SpringBoot Java)</h3>
