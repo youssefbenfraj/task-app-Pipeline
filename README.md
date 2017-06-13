@@ -47,7 +47,6 @@ PROJECT_FOLDER
    │  angular-cli.json   #ng build configurations
    └──[node_modules]
    └──[src]              #frontend source files
-   └──[dist]             #frontend build files, auto-created after running angular build: ng -build
 </pre>
 <h3>Prerequisites</h3>
 Ensure you have this installed before proceeding further
@@ -68,17 +67,20 @@ This is an RESTfull implementation of a simple task app. The goal of the project
 <pre>
 # Navigate to PROJECT_FOLDER/webui (should cntain package.json )
 npm install
-# build the project (this will put the files under dist folder)
-ng build -prod --aot=false
 </pre>
 <h3>Install Backend (SpringBoot Java)</h3>
 <pre>
 # Maven Build : Navigate to the root folder where pom.xml is present 
 mvn clean install
 </pre>
-<h3>Start the API and WebUI server</h3>
+<h3>Start the API and Webui server</h3>
+<p>For API</p>
 <pre>
-java -jar ./target/app-1.0.0.jar
+java -jar ./target/task-1.0.jar
+</pre>
+<p>For Angular app</p>
+<pre>
+npm start
 </pre>
 <h3>Accessing Application</h3>
 <table>
