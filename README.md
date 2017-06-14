@@ -59,7 +59,7 @@ Ensure you have this installed before proceeding further
 <h3>About</h3>
 This is an RESTfull implementation of a simple task app. The goal of the project is to
 <ul>
-<li>Highlight techniques of making and securing a REST full app using SpringBoot</li>
+<li>Highlight techniques of making a REST full app using SpringBoot</li>
 <li>How to consume an RESTfull service and make an HTML5 based Single Page App using Angular 4+</li>
 </ul>
 <h3>Install Frontend</h3>
