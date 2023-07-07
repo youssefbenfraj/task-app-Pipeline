@@ -3,7 +3,7 @@ FROM node:12.15 as node
 WORKDIR /app
 COPY . .
 RUN npm install
-RUN npm start
+RUN npm run build
 
 #stage 2
 FROM nginx:alpine
