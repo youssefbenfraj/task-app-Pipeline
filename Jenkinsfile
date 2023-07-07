@@ -13,12 +13,12 @@ pipeline{
     }
     stage('build spring'){
       steps{
-        sh 'docker build -t spring-task ./backend/'
+        sh 'docker build -t spring-task .'
       }
     } 
     stage('build angular'){
         steps{
-          sh 'docker build -t angular-task ./frontend/'
+          sh 'docker build -t angular-task ./webui/'
         }
       }
     stage('create network'){
